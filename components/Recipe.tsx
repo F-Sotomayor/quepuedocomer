@@ -4,8 +4,8 @@ import { FC } from "react";
 export const Recipe: FC = () => {
   return (
     <Stack
-      height="500px"
-      width="275px"
+      height="55vh"
+      width="65vw"
       backgroundColor="#ffae85"
       borderRadius={12}
       padding={4}
@@ -13,11 +13,11 @@ export const Recipe: FC = () => {
       <Flex
         justify="flex-end"
         align="flex-start"
-        transform="translateY(-190px)"
-        right={18}
+        transform="translateY(-15vh)"
+        right={0}
         position="absolute"
       >
-        <Image src="./pasta.png" alt="Pasta" width="200px" height="325px" />
+        <Image src="./pasta.png" alt="Pasta" width="35vw" height="30vh" />
       </Flex>
       <Flex height="90px" align="flex-end">
         <span

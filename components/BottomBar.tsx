@@ -4,11 +4,12 @@ import { FC } from "react";
 export const BottomBar: FC = () => {
   return (
     <Stack
+      margin="0px !important"
       direction="row"
       width="100%"
-      height="8vh"
+      height="100%"
       backgroundColor="#F0F5F9"
-      borderRadius={12}
+      borderBottomRadius={12}
       justify="space-around"
       align="center"
     >

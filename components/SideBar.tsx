@@ -4,8 +4,8 @@ import { FC } from "react";
 export const SideBar: FC = () => {
   return (
     <Stack
-      w="15vw"
       h="90vh"
+      w="15vw"
       backgroundColor="#F0F5F9"
       align="center"
       paddingY={4}

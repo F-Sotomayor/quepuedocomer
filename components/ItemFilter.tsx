@@ -15,7 +15,8 @@ export const ItemFilter: FC<Props> = ({ icon, text, altImage }) => {
       align="center"
       justify="center"
       backgroundColor="#F0F5F9"
-      marginRight={2}
+      marginRight={4}
+      borderRadius={12}
     >
       <Image src={icon} alt={altImage} height="40px" width="40px" />
       <Text>{text}</Text>

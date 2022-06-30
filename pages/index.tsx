@@ -1,6 +1,7 @@
-import { Flex, Text, useColorMode } from "@chakra-ui/react";
+import { Flex, Stack, Text, useColorMode } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { BottomBar } from "../components/BottomBar";
+import { FilterBar } from "../components/FilterBar";
 import { ItemFilter } from "../components/ItemFilter";
 import { Recipe } from "../components/Recipe";
 import { SideBar } from "../components/SideBar";
@@ -8,35 +9,18 @@ import { SideBar } from "../components/SideBar";
 const Home: NextPage = () => {
   const { toggleColorMode } = useColorMode();
   return (
-    <Flex padding={2} direction="column">
-      <Flex>
-        <Flex>
-          <SideBar />
-        </Flex>
-        <Flex flex={1} direction="column" padding={4} width="100%">
-          <Text fontSize={18} fontWeight={500}>
-            Simple recipy with your
-            <span style={{ color: "#FC6011" }}> fridge&apos;s ingredients</span>
-          </Text>
-          <Flex
-            width="100%"
-            justify="space-evenly"
-            marginTop={6}
-            height="8vh"
-            align="center"
-          >
-            <ItemFilter altImage="All" icon="all.png" text="ALL" />
-            <ItemFilter altImage="All" icon="all.png" text="Chinese" />
-            <ItemFilter altImage="All" icon="all.png" text="Pizza" />
-            <ItemFilter altImage="All" icon="all.png" text="Spicy" />
-          </Flex>
-          <Flex flex={0.95} justify="center" align="flex-end">
+    <Stack padding={2}>
+      <Stack direction="row" maxH="100vh" maxW="100vw">
+        <SideBar />
+        <Flex direction="column">
+          <FilterBar />
+          <Flex width="100%" flex={1} justify="center">
             <Recipe />
           </Flex>
         </Flex>
-      </Flex>
+      </Stack>
       <BottomBar />
-    </Flex>
+    </Stack>
   );
 };
 
